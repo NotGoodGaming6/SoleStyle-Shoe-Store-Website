@@ -9,7 +9,7 @@ const NewsletterSection = () => {
       <div className="relative mx-auto max-w-7xl px-4 text-center lg:px-8">
         <h2 className="font-display text-4xl font-bold text-white sm:text-5xl">Ready to Step Up Your Game?</h2>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-primary-100">
-          Join the Stride community and get 15% off your first order. Plus, early access to new releases and exclusive member-only deals.
+          Join the SoleStyle community and get 15% off your first order. Plus, early access to new releases and exclusive member-only deals.
         </p>
         <form className="mx-auto mt-10 flex max-w-md flex-col gap-4 sm:flex-row" onSubmit={e => e.preventDefault()}>
           <input type="email" placeholder="Enter your email" className="flex-1 rounded-full border-2 border-white/20 bg-white/10 px-6 py-4 text-white placeholder:text-white/60 focus:border-white focus:outline-none" />

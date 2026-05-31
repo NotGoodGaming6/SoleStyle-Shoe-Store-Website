@@ -3,21 +3,21 @@ import { motion } from 'framer-motion';
 const StoreLocatorPage = () => {
   const stores = [
     {
-      name: "Stride Flagship - SoHo",
+      name: "SoleStyle Flagship - SoHo",
       address: "123 Broadway, New York, NY 10012",
       phone: "+1 (212) 555-0198",
       hours: "Mon-Sat: 10am - 8pm, Sun: 11am - 7pm",
       mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.479590629731!2d-73.9996562!3d40.725916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598fc2be0413%3A0x6790a3692ea4087e!2sSoHo%2C%20New%20York%2C%20NY!5e0!3m2!1saz!2saz!4v1776348888000!5m2!1saz!2saz"
     },
     {
-      name: "Stride Tech Hub - London",
+      name: "SoleStyle Tech Hub - London",
       address: "45 Oxford St, London W1D 2DZ, UK",
       phone: "+44 20 7946 0123",
       hours: "Mon-Sat: 9am - 9pm, Sun: 12pm - 6pm",
       mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.9050212!2d-0.1340401!3d51.5152862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ad000000001%3A0x1d00000000000000!2sOxford%20St%2C%20London!5e0!3m2!1saz!2saz!4v1776348889000!5m2!1saz!2saz"
     },
     {
-       name: "Stride Boutique - Baku",
+       name: "SoleStyle Boutique - Baku",
        address: "Nizami Street 68, Baku, Azerbaijan",
        phone: "+994 12 493 00 00",
        hours: "Mon-Sun: 10am - 10pm",
@@ -35,7 +35,7 @@ const StoreLocatorPage = () => {
           className="text-center"
         >
           <h1 className="font-display text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl">Store Locator</h1>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">Visit us in person to experience the Stride difference.</p>
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">Visit us in person to experience the SoleStyle difference.</p>
         </motion.div>
 
         <div className="mt-16 grid gap-12 lg:grid-cols-3">

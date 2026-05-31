@@ -18,12 +18,12 @@ const AboutPage = () => {
               We believe in the power of the perfect step.
             </p>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400">
-              Stride was founded with a singular vision: to revolutionize the footwear industry by blending high-performance engineering with timeless aesthetic design.
+              SoleStyle was founded with a singular vision: to revolutionize the footwear industry by blending high-performance engineering with timeless aesthetic design.
             </p>
           </div>
         </div>
       </section>
-
+ 
       <section className="bg-white py-16 dark:bg-gray-950">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-12">
@@ -43,7 +43,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-
+ 
       <section className="bg-gray-50 py-20 dark:bg-gray-900/50 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid items-center gap-16 lg:grid-cols-2">
@@ -55,7 +55,7 @@ const AboutPage = () => {
                   Our journey began in a small workshop with a big dream. We saw that runners and athletes often had to choose between shoes that looked good and shoes that worked well. We decided that no one should ever have to make that compromise again.
                 </p>
               </div>
-
+ 
               <div className="grid gap-6 sm:grid-cols-2">
                 <div className="rounded-2xl bg-white p-6 shadow-sm transition-transform hover:-translate-y-1 dark:bg-gray-800">
                   <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-primary-50 text-primary-600 dark:bg-primary-900/40 dark:text-primary-400">
@@ -77,7 +77,7 @@ const AboutPage = () => {
                 </div>
               </div>
             </div>
-
+ 
             <div className="relative lg:pl-12">
               <div className="relative aspect-square overflow-hidden rounded-[40px] border-8 border-white shadow-2xl dark:border-gray-800">
                 <img 
@@ -96,12 +96,12 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-
+ 
       <section className="bg-white py-20 dark:bg-gray-950 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="text-center">
             <h2 className="font-display text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">Our Values</h2>
-            <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">The principles that drive every design and decision at Stride.</p>
+            <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">The principles that drive every design and decision at SoleStyle.</p>
           </div>
 
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

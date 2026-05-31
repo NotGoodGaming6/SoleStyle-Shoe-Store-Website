@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 const settingSchema = new mongoose.Schema({
   storeSettings: {
-    storeName: { type: String, default: 'Stride' },
-    storeEmail: { type: String, default: 'support@stride.com' },
+    storeName: { type: String, default: 'SoleStyle' },
+    storeEmail: { type: String, default: 'support@solestyle.com' },
     storePhone: { type: String, default: '+1 (555) 123-4567' },
     currency: { type: String, default: 'USD' },
     exchangeRates: {
@@ -21,7 +21,7 @@ const settingSchema = new mongoose.Schema({
     taxRate: { type: Number, default: 8.5 }
   },
   appearance: {
-    promoBarText: { type: String, default: 'Free shipping on orders over $75 | Use code STRIDE20 for 20% off your first order' },
+    promoBarText: { type: String, default: 'Free shipping on orders over $75 | Use code SOLESTYLE20 for 20% off your first order' },
     promoBarEnabled: { type: Boolean, default: true }
   },
   notifications: {

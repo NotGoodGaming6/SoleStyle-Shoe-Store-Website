@@ -44,7 +44,7 @@ const AdminSettings = () => {
   });
 
   const [appearance, setAppearance] = useState({
-    promoBarText: 'Free shipping on orders over $75 | Use code STRIDE20 for 20% off your first order',
+    promoBarText: 'Free shipping on orders over $75 | Use code SOLESTYLE20 for 20% off your first order',
     promoBarEnabled: true,
   });
 

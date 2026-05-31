@@ -115,7 +115,7 @@ const FAQPage = () => {
             transition={{ delay: 0.1 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-gray-400"
           >
-            Search our knowledge base or browse by category to find answers to common questions about your Stride experience.
+            Search our knowledge base or browse by category to find answers to common questions about your SoleStyle experience.
           </motion.p>
           
           <motion.div 

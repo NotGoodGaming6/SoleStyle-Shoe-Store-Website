@@ -14,7 +14,7 @@ const TestimonialSection = () => {
             Customer Love
           </span>
           <h2 className="mt-4 font-display text-3xl font-bold text-white sm:text-4xl">What Our Customers Say</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-gray-400">Join thousands of happy customers who have made Stride their go-to footwear brand</p>
+          <p className="mx-auto mt-4 max-w-2xl text-gray-400">Join thousands of happy customers who have made SoleStyle their go-to footwear brand</p>
         </motion.div>
         
         <motion.div 
@@ -25,9 +25,9 @@ const TestimonialSection = () => {
           className="mt-16 grid gap-8 lg:grid-cols-3"
         >
           {[
-            { name: 'Marcus Chen', role: 'Marathon Runner', text: 'Stride has completely transformed my running experience. The Velocity Runner Pro helped me PR at my last marathon by 8 minutes.', img: '/images/stride-asset-17.webp' },
-            { name: 'Emily Rodriguez', role: 'Fitness Instructor', text: 'I wear Stride shoes for all my classes. They are versatile, stylish, and most importantly, my feet never hurt after a long day of training.', img: '/images/stride-asset-18.webp' },
-            { name: 'David Kim', role: 'Sneaker Enthusiast', text: 'The quality and attention to detail is unmatched. I have been collecting sneakers for 15 years and Stride has become my go-to brand.', img: '/images/stride-asset-19.webp' }
+            { name: 'Marcus Chen', role: 'Marathon Runner', text: 'SoleStyle has completely transformed my running experience. The Velocity Runner Pro helped me PR at my last marathon by 8 minutes.', img: '/images/stride-asset-17.webp' },
+            { name: 'Emily Rodriguez', role: 'Fitness Instructor', text: 'I wear SoleStyle shoes for all my classes. They are versatile, stylish, and most importantly, my feet never hurt after a long day of training.', img: '/images/stride-asset-18.webp' },
+            { name: 'David Kim', role: 'Sneaker Enthusiast', text: 'The quality and attention to detail is unmatched. I have been collecting sneakers for 15 years and SoleStyle has become my go-to brand.', img: '/images/stride-asset-19.webp' }
           ].map((review, i) => (
             <motion.div 
               key={i} 

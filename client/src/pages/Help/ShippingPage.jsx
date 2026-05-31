@@ -29,7 +29,7 @@ const ShippingPage = () => {
           className="text-center"
         >
           <h1 className="font-display text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl">Shipping & Returns</h1>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">Everything you need to know about getting your Stride gear.</p>
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">Everything you need to know about getting your SoleStyle gear.</p>
         </motion.div>
 
         <div className="mt-16 space-y-12">

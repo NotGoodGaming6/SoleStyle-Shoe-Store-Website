@@ -24,7 +24,7 @@ const AuthHeader = ({ isLogin, isForgotPassword, registerStep, forgotPasswordSte
               forgotPasswordStep === 2 ? 'Verify Reset' :
               'New Password'
             ) : isLogin ? 'Welcome back' : 
-              registerStep === 1 ? 'Join Stride' : 
+              registerStep === 1 ? 'Join SoleStyle' : 
               registerStep === 2 ? 'Check Email' : 
               'Secure Account'}
           </h2>

@@ -29,7 +29,7 @@ const SizeGuidePage = () => {
           className="text-center"
         >
           <h1 className="font-display text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl">Size Guide</h1>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">Find the perfect fit for your next pair of Stride shoes.</p>
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">Find the perfect fit for your next pair of SoleStyle shoes.</p>
         </motion.div>
 
         <motion.div 
