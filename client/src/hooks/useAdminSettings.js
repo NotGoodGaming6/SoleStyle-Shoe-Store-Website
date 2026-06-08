@@ -10,13 +10,25 @@ const defaultSettings = {
     taxRate: 8.5,
   },
   appearance: {
-    promoBarText: 'Free shipping on orders over $75 | Use code SOLE20 for 20% off your first order',
+    promoBarText: 'Free shipping on orders over $75 | Use code SOLESTYLE20 for 20% off your first order',
     promoBarEnabled: true,
   }
 };
 
+const getInitialSettings = () => {
+  try {
+    const cached = localStorage.getItem('solestyle_settings');
+    if (cached) {
+      return JSON.parse(cached);
+    }
+  } catch (e) {
+    console.error('Failed to parse cached settings from localStorage', e);
+  }
+  return defaultSettings;
+};
+
 export const useAdminSettings = () => {
-  const [settings, setSettings] = useState(defaultSettings);
+  const [settings, setSettings] = useState(getInitialSettings);
 
   useEffect(() => {
     const fetchSettings = async () => {
@@ -24,12 +36,20 @@ export const useAdminSettings = () => {
         const res = await fetch(import.meta.env.VITE_API_BASE_URL + '/api/solestyle/settings');
         if (res.ok) {
           const data = await res.json();
-          setSettings(prev => ({
-            ...prev,
-            storeSettings: { ...prev.storeSettings, ...data.storeSettings },
-            appearance: { ...prev.appearance, ...data.appearance },
-            notifications: { ...prev.notifications, ...data.notifications }
-          }));
+          setSettings(prev => {
+            const updated = {
+              ...prev,
+              storeSettings: { ...prev.storeSettings, ...data.storeSettings },
+              appearance: { ...prev.appearance, ...data.appearance },
+              notifications: { ...prev.notifications, ...data.notifications }
+            };
+            try {
+              localStorage.setItem('solestyle_settings', JSON.stringify(updated));
+            } catch (err) {
+              console.error('Failed to save settings to localStorage', err);
+            }
+            return updated;
+          });
         }
       } catch (e) {
         console.error('Failed to fetch admin settings from backend', e);
