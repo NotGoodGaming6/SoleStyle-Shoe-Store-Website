@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 import EmptyCart from '@pages/Cart/components/EmptyCart';
 import CartItem from '@pages/Cart/components/CartItem';
 import CartSummary from '@pages/Cart/components/CartSummary';
-import { useAdminSettings } from '../../hooks/useAdminSettings';
+import { useAdminSettings } from '@hooks/useAdminSettings';
 
 const CartPage = () => {
   const { items, totalAmount } = useSelector(state => state.cart);

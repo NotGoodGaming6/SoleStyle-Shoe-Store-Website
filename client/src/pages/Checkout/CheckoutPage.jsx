@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { clearCart } from '@redux/cartSlice';
 import toast from 'react-hot-toast';
 import { motion } from 'framer-motion';
-import { useSettings } from '../../context/SettingsContext';
-import { formatCurrency } from '../../utils/currencyUtils';
+import { useSettings } from '@context/SettingsContext';
+import { formatCurrency } from '@utils/currencyUtils';
 import { getProductImageUrl } from '@utils/imageUtils';
 
 const CheckoutPage = () => {

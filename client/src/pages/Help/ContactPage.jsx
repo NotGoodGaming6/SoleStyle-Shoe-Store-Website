@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useAdminSettings } from '../../hooks/useAdminSettings';
+import { useAdminSettings } from '@hooks/useAdminSettings';
 
 const ContactPage = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);

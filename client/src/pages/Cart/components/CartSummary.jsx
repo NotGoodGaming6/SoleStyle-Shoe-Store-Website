@@ -1,6 +1,6 @@
 import React from 'react';
-import { useSettings } from '../../../context/SettingsContext';
-import { formatCurrency } from '../../../utils/currencyUtils';
+import { useSettings } from '@context/SettingsContext';
+import { formatCurrency } from '@utils/currencyUtils';
 
 const CartSummary = ({ totalAmount, onCheckout }) => {
   const { settings } = useSettings();

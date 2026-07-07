@@ -1,12 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import AdminLayout from '@pages/Admin/AdminLayout';
-import AdminDashboard from '@pages/Admin/AdminDashboard';
-import AdminProducts from '@pages/Admin/AdminProducts';
-import AdminOrders from '@pages/Admin/AdminOrders';
-import AdminUsers from '@pages/Admin/AdminUsers';
-import AdminSettings from '@pages/Admin/AdminSettings';
 import { Loader2 } from 'lucide-react';
+
+const AdminLayout = lazy(() => import('@pages/Admin/AdminLayout'));
+const AdminDashboard = lazy(() => import('@pages/Admin/AdminDashboard'));
+const AdminProducts = lazy(() => import('@pages/Admin/AdminProducts'));
+const AdminOrders = lazy(() => import('@pages/Admin/AdminOrders'));
+const AdminUsers = lazy(() => import('@pages/Admin/AdminUsers'));
+const AdminSettings = lazy(() => import('@pages/Admin/AdminSettings'));
 
 const AdminRouter = () => {
   const [isAdmin, setIsAdmin] = useState(null);
@@ -48,17 +49,25 @@ const AdminRouter = () => {
     return <Navigate to={token ? "/" : "/auth"} replace />;
   }
 
+  const AdminPageLoader = () => (
+    <div className="flex min-h-[50vh] w-full items-center justify-center bg-gray-950 text-white">
+      <Loader2 className="h-10 w-10 animate-spin text-primary-500" />
+    </div>
+  );
+
   return (
-    <Routes>
-      <Route element={<AdminLayout />}>
-        <Route index element={<AdminDashboard />} />
-        <Route path="products" element={<AdminProducts />} />
-        <Route path="orders" element={<AdminOrders />} />
-        <Route path="users" element={<AdminUsers />} />
-        <Route path="settings" element={<AdminSettings />} />
-      </Route>
-      <Route path="*" element={<Navigate to="/admin" replace />} />
-    </Routes>
+    <Suspense fallback={<AdminPageLoader />}>
+      <Routes>
+        <Route element={<AdminLayout />}>
+          <Route index element={<AdminDashboard />} />
+          <Route path="products" element={<AdminProducts />} />
+          <Route path="orders" element={<AdminOrders />} />
+          <Route path="users" element={<AdminUsers />} />
+          <Route path="settings" element={<AdminSettings />} />
+        </Route>
+        <Route path="*" element={<Navigate to="/admin" replace />} />
+      </Routes>
+    </Suspense>
   );
 };
 

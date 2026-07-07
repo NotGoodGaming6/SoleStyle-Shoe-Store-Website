@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useSettings } from '../../../context/SettingsContext';
-import { formatCurrency } from '../../../utils/currencyUtils';
+import { useSettings } from '@context/SettingsContext';
+import { formatCurrency } from '@utils/currencyUtils';
+import SplitText from '@components/ReactBits/SplitText';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -70,9 +71,16 @@ const HeroSection = () => {
             </motion.span>
             
             <motion.h1 variants={itemVariants} className="mt-6 font-display text-5xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl">
-              Step Into
+              <SplitText 
+                text="Step Into" 
+                delay={0.1}
+                className="block"
+              />
               <span className="block bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">
-                Your Best
+                <SplitText 
+                  text="Your Best" 
+                  delay={0.5}
+                />
               </span>
             </motion.h1>
             

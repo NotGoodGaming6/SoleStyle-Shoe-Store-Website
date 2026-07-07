@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useAdminSettings } from '../../hooks/useAdminSettings';
+import { useAdminSettings } from '@hooks/useAdminSettings';
 
 const Footer = () => {
   const { storeSettings } = useAdminSettings();

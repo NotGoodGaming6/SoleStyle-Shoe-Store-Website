@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trash2, Plus, Minus } from 'lucide-react';
-import { useSettings } from '../../../context/SettingsContext';
-import { formatCurrency } from '../../../utils/currencyUtils';
+import { useSettings } from '@context/SettingsContext';
+import { formatCurrency } from '@utils/currencyUtils';
 import { getProductImageUrl } from '@utils/imageUtils';
 
 const CartItem = ({ item, onUpdateQuantity, onRemove }) => {

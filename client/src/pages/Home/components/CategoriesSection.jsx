@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import SpotlightCard from '@components/ReactBits/SpotlightCard';
 
 const CategoriesSection = () => {
   const [categories, setCategories] = useState([]);
@@ -71,23 +72,28 @@ const CategoriesSection = () => {
               viewport={{ once: true }}
               className="h-full"
             >
-              <Link to={`/products?category=${cat.id}`} className="category-card group relative block h-full w-full overflow-hidden rounded-2xl">
-                <div className="aspect-[4/3]">
-                  <img src={cat.img} alt={cat.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-70 transition-opacity"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 transition-transform">
-                  <span className="inline-block rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">{cat.count} products</span>
-                  <h3 className="mt-3 font-display text-2xl font-bold text-white">{cat.title}</h3>
-                  <p className="mt-1 text-sm text-gray-300">{cat.desc}</p>
-                  <div className="mt-4 inline-flex items-center gap-2 font-medium text-white">
-                    Shop Now
-                    <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                    </svg>
+              <SpotlightCard
+                className="rounded-2xl overflow-hidden h-full w-full"
+                spotlightColor="rgba(255, 255, 255, 0.15)"
+              >
+                <Link to={`/products?category=${cat.id}`} className="category-card group relative block h-full w-full">
+                  <div className="aspect-[4/3]">
+                    <img src={cat.img} alt={cat.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
                   </div>
-                </div>
-              </Link>
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-70 transition-opacity"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 transition-transform">
+                    <span className="inline-block rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">{cat.count} products</span>
+                    <h3 className="mt-3 font-display text-2xl font-bold text-white">{cat.title}</h3>
+                    <p className="mt-1 text-sm text-gray-300">{cat.desc}</p>
+                    <div className="mt-4 inline-flex items-center gap-2 font-medium text-white">
+                      Shop Now
+                      <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </Link>
+              </SpotlightCard>
             </motion.div>
           ))}
         </motion.div>

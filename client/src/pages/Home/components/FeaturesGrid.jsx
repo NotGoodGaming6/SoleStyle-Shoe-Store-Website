@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import SpotlightCard from '@components/ReactBits/SpotlightCard';
 
 const FeaturesGrid = () => {
   return (
@@ -17,17 +18,22 @@ const FeaturesGrid = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="flex items-start gap-4"
+              className="h-full"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400">
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d={item.icon}></path>
-                </svg>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white">{item.title}</h3>
-                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">{item.text}</p>
-              </div>
+              <SpotlightCard 
+                className="flex flex-col items-start gap-4 p-6 rounded-2xl border border-gray-200/50 bg-white/50 backdrop-blur-md dark:border-gray-800/50 dark:bg-gray-950/50 shadow-sm transition-all duration-300 hover:shadow-md hover:border-primary-500/20 h-full"
+                spotlightColor="rgba(79, 70, 229, 0.15)"
+              >
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400">
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d={item.icon}></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">{item.title}</h3>
+                  <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{item.text}</p>
+                </div>
+              </SpotlightCard>
             </motion.div>
           ))}
         </div>
