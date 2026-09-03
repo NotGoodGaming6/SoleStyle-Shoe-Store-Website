@@ -38,7 +38,5 @@ yarn-error.log*
 **/*.md
 
 # Ignore root level vercel.json
-vercel.json
+/vercel.json
 
-
-**/vercel.json
